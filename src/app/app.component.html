@@ -1,0 +1,52 @@
+
+<h1>  {{title | uppercase}}  </h1>
+
+<h5> Today Date : {{today | date : 'dd/mm/yy'}}</h5>
+
+<p>
+  image Url = {{imageUrl | lowercase}}
+</p>
+
+<img [src]="imageUrl" [width]="imagewidth" />
+
+<p> Price = {{price | currency}}</p>
+
+<span>
+  Selling price : {{sellingPrice | currency}}, profit : {{sellingPrice | profit |currency}}
+</span>
+
+<hr>
+
+<button type="button" [attr.aria-label] = 'attributeValue'>Click Here </button>
+
+<hr>
+<hr>
+
+<h3 [class] = "multipleClasses">
+  This is for class  binding!!!
+</h3>
+
+<hr>
+<hr>
+
+<h3 [style]="multipleStyles">
+  This is for style  binding!!!
+</h3>
+
+<hr>
+<button (click)="setTimeToNow()">
+  Set to today time
+</button>
+
+<h3> Now Time : {{timeNow}}</h3>
+
+<hr>
+<hr>
+
+<app-login> </app-login>
+
+<app-contact></app-contact>
+
+
+<app-about> </app-about>
+<app-footer></app-footer>
